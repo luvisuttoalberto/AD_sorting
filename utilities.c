@@ -49,7 +49,7 @@ double test(void (*sort)(void *A, const unsigned int n,
   // Collecting time for copy A into B and sorting B
   clock_gettime(CLOCK_REALTIME, &requestStart);
   for (size_t i = 0; i < rep; i++) {
-    memcpy(B,A,total_size);
+    memcpy(B,A+i*n,total_size);
     sort(B,n,elem_size,leq);
   }
   clock_gettime(CLOCK_REALTIME, &requestEnd);
@@ -65,7 +65,7 @@ double test(void (*sort)(void *A, const unsigned int n,
   // Collecting time for copying A in B
   clock_gettime(CLOCK_REALTIME, &requestStart);
   for (size_t i = 0; i < rep; i++) {
-    memcpy(B,A,total_size);
+    memcpy(B,A+i*n,total_size);
   }
   clock_gettime(CLOCK_REALTIME, &requestEnd);
 
