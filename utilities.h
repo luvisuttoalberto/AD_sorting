@@ -15,6 +15,6 @@ double test(void (*sort)(void *A, const unsigned int n,
                          total_order leq), 
             const void *A, const unsigned int n, 
             const size_t elem_size, total_order leq, 
-            const unsigned int rep);
+            const unsigned int rep, int *sorted);
 
 #endif // __UTILITIES__

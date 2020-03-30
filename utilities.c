@@ -21,7 +21,7 @@ int is_sorted(const void *A, const unsigned int n,
               const size_t elem_size, 
               total_order leq)
 {
-  for (const void *addr=A; addr!=A-elem_size; 
+  for (const void *addr=A; addr!=A+(n-1)*elem_size; 
     addr+=elem_size) {
         
     if (!leq(addr, addr+elem_size)) {
@@ -37,7 +37,8 @@ double test(void (*sort)(void *A, const unsigned int n,
                          total_order leq), 
             const void *A, const unsigned int n, 
             const size_t elem_size, total_order leq, 
-            const unsigned int rep)
+            const unsigned int rep,
+            int *sorted)
 {
   struct timespec requestStart, requestEnd;
   double accum, cpy_accum;
@@ -55,6 +56,11 @@ double test(void (*sort)(void *A, const unsigned int n,
 
   accum = (requestEnd.tv_sec - requestStart.tv_sec) +
           (requestEnd.tv_nsec - requestStart.tv_nsec) / 1E9;
+
+
+  if (sorted != NULL) {
+    *sorted = is_sorted(B, n, elem_size, leq);
+  }
 
   // Collecting time for copying A in B
   clock_gettime(CLOCK_REALTIME, &requestStart);
