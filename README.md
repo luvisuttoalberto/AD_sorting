@@ -1,7 +1,7 @@
 # DSSC - Algorithmic Design - Sorting Algorithms
-This repository contains some code to simplify the implementation and testing of sorting algorithms. The code in this repository natively support insertion sort, quick sort, bubble sort, selection sort, and heap sort, but other algorithms can easily be added by editing the main function in the file [main.c](main.c).
+This repository contains some code to simplify the implementation and testing of sorting algorithms. The code in this repository natively support insertion sort, quick sort, bubble sort, selection sort, and heap sort, but other algorithms can easily be added by editing the main function in the file [main.c](src/main.c).
 
-In order to test the differences in term of execution-time between the sorting algorithms, you need to implement all of them. The insertion sort algorithm must be implemented in the file [insertion_sort.c](insertion_sort.c) according to the API defined in [insertion_sort.h](insertion_sort.h); the quick sort algorithm in the file [quick_sort.c](quick_sort.c) and, so forward, for all the algorithms.
+In order to test the differences in term of execution-time between the sorting algorithms, you need to implement all of them. The insertion sort algorithm must be implemented in the file [insertion_sort.c](src/insertion_sort.c) according to the API defined in [insertion_sort.h](src/insertion_sort.h); the quick sort algorithm in the file [quick_sort.c](src/quick_sort.c) and, so forward, for all the algorithms.
 
 
 A Makefile can be produced by using [cmake](https://cmake.org/) as follows:
