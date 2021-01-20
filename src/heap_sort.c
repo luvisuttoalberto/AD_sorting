@@ -1,6 +1,5 @@
 #include "heap_sort.h"
 #include <binheap.h>
-#include "swap.h"
 
 #define ADDR(A, j, elem_size) ((A)+(j)*(elem_size))
 
