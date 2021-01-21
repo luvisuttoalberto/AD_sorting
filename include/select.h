@@ -5,6 +5,16 @@
 
 #include "total_order.h"
 
+typedef struct tuple{
+
+    unsigned int first_element;
+    unsigned int second_element;
+
+}tuple;
+
+// New version of the partition algorithm
+tuple modified_partition(void *A, unsigned int l, unsigned int r, unsigned int p, const size_t elem_size, total_order leq);
+
 /**********************************************************************
  * An implementation for the Select algorithm.
  *
