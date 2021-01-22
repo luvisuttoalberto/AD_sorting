@@ -27,7 +27,7 @@ tuple modified_partition(void *A, unsigned int l, unsigned int r, unsigned int p
  *
  * @param A is the array of which the i-th value should be found. 
  *          The original ordering of the array may be destroyed.
- * @param n is the number of element of A.
+ * @param n is the number of elements of A.
  * @param i is the index in the sorted array of the value to be found.
  * @param elem_size is the type size in bytes of the elements in A.
  * @param leq is the total order to be satisfied by the sorting.
