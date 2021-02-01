@@ -33,7 +33,7 @@ void recursive_quick_sort(void *A, unsigned int l, unsigned int r, const size_t 
     while(l < r){
         unsigned int p = partition(A, l, r, l, elem_size, leq);
         recursive_quick_sort(A, l, p, elem_size, leq);
-        l = p+1;
+        l = p + 1;
     }
 }
 
